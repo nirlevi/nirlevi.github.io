@@ -10,12 +10,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <!--<link rel="Shortcut Icon" href="" type="image/x-icon" />-->
   <link rel="stylesheet" href="/assets/css/style.css" type=type"text/css" media="screen" />
+  <script type="text/javascript" src="/assets/js/jquery-1.6.2.min.js"></script>
+  <script typepe="text/javascript" src="/assets/js/jquery.vegas.js"></script>
 
 </head>
 <body>
 <div class="content">
-
-<section class="row-fluid about_me" id="about_me">
+  <section class="row-fluid about_me" id="about_me">
         <article class="span6 borderleft par_el">
           <span class="profile">
             <img src="/assets/img/me.jpg" alt="MyPicture" width="84" height="84">
@@ -37,5 +38,21 @@
 
 
 </div>
+<script type="text/javascript">
+$( function() {
+  $.vegas('slideshow', {
+    backgrounds:[
+      { src:'/assets/img/background.jpg' }
+    ]
+    })('overlay');
+  });
+  $(document).ready(function() {
+    $(".content").css("display", "none");
+    $(".content").fadeIn(1500);
+  });
+
+
+
+</script>
 </body>
 </html>
