@@ -39,13 +39,13 @@
 
 </div>
 <script type="text/javascript">
-$( function() {
-  $.vegas('slideshow', {
-    backgrounds:[
-      { src:'/assets/img/background.jpg' }
+$("body").vegas({
+    slides: [
+        { src: "/assets/img/background.jpg" },
     ]
-    })('overlay');
-  });
+});
+
+$( function() {
   $(document).ready(function() {
     $(".content").css("display", "none");
     $(".content").fadeIn(1500);
